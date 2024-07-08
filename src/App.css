@@ -9,7 +9,7 @@
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+    animation: App-logo-spin infinite 5s linear;
   }
 }
 
@@ -28,11 +28,77 @@
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
+@keyframes an1 {
   from {
     transform: rotate(0deg);
   }
   to {
     transform: rotate(360deg);
   }
+}
+
+/* src/AnimatedImage.css */
+.container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+}
+
+.animated-image {
+  position: absolute;
+  top: 50%;
+  left: -100%;
+  transform: translateY(-50%);
+  animation: moveImage 10s linear infinite;
+}
+
+@keyframes moveImage {
+  0% {
+    left: -100%;
+    /* transform: scale(1 , 1); */
+  }
+  50% {
+    left: 100%;
+    /* transform: scale(1 , 1); */
+   
+  }
+  100% {
+    left: -100%;
+    /* transform: scale(-1 , 1); */
+  }
+}
+
+.bg {
+  /* background-image: image('ppkdjp.jpg'); */
+}
+
+.btn-primary {
+  background-color: #4CAF50; /* Green */
+  border-width: 3px;
+  border-radius: 20%;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+.btn-danger {
+  background-color: #d6050f; /* Green */
+  border-width: 3px;
+  border-radius: 20%;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
 }
